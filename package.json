@@ -1,0 +1,19 @@
+{
+  "name": "rata",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap --npm-client yarn --use-workspaces"
+  },
+  "useWorkspaces": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:cashely/rata.git",
+  "author": "shidaming <shidaming@shein.cn>",
+  "license": "MIT"
+}

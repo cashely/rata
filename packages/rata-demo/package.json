@@ -1,0 +1,41 @@
+{
+  "name": "rata-demo",
+  "version": "0.0.0",
+  "private": true,
+  "description": "demo",
+  "author": "shidaming <shidaming@shein.cn>",
+  "homepage": "https://github.com/cashely/rata#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cashely/rata.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "start": "webpack-dev --config webpack.dev.js"
+  },
+  "bugs": {
+    "url": "https://github.com/cashely/rata/issues"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@rata/webpack-dev": ">=0.0.0",
+    "babel-loader": "^8.2.3",
+    "html-webpack-plugin": "^5.5.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@rata/babel-plugin-bind",
+  "version": "0.0.0",
+  "private": true,
+  "description": "> TODO: description",
+  "author": "shidaming <shidaming@shein.cn>",
+  "homepage": "https://github.com/cashely/rata#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cashely/rata.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/cashely/rata/issues"
+  }
+}
