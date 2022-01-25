@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: './index.jsx',
+	entry: './root.jsx',
 	output: {
 		filename: '[name].[chunkhash:8].js',
 		path: path.resolve(__dirname, 'dist'),
@@ -17,6 +17,7 @@ module.exports = {
 					presets: ['@babel/preset-env', '@babel/preset-react']
 				}
 			},
+			exclude: /node_modules/
 		}]
 	},
 	plugins: [
