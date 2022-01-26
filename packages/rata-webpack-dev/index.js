@@ -11,8 +11,7 @@ let defaultConfig = 'webpack.dev.config';
 
 const devServerOptions = {
 	port: 3000,
-	open: true
-
+	open: false
 }
 
 async function start() {
@@ -23,6 +22,19 @@ async function start() {
 	}
 
 	const webpackConfigJson = require(path.join(projectDir, defaultConfig))
+
+	// 插入入口检测文件
+
+	webpackConfigJson.module.rules.unshift({
+		test: new RegExp('\.jsx?$'),
+		use: {
+			loader: '@rata/loader-routes'
+		},
+		exclude: /node_modules/
+	});
+
+	// console.log(webpackConfigJson.module.rules)
+	// process.exit()
 
 	const webpackCompiler = webpack(webpackConfigJson)
 
