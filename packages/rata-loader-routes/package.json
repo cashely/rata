@@ -24,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/cashely/rata/issues"
   },
-  "homepage": "https://github.com/cashely/rata#readme"
+  "homepage": "https://github.com/cashely/rata#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "glob": "^7.2.0"
+  }
 }

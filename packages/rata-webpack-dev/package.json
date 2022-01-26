@@ -26,15 +26,17 @@
     "url": "https://github.com/cashely/rata/issues"
   },
   "devDependencies": {
+    "@rata/webpack-dev": ">=0.0.0",
+    "glob": "^7.2.0",
     "webpack": "^5.67.0",
     "webpack-dev-server": "^4.7.3",
     "yargs": "^17.3.1"
   },
   "peerDependencies": {
-    "html-webpack-plugin": "^5.5.0",
-    "babel-loader": "^8.2.3",
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7"
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "html-webpack-plugin": "^5.5.0"
   }
 }
