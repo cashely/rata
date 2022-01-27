@@ -8,8 +8,6 @@ module.exports = function addRoutes (source) {
 	const imports = mapDirToImports(global.dirs);
 	
 	source = imports.join('\n')+ '\n' + source.replace(/"REACT_ROUTES"/, routes.join(','));
-	console.log(/"REACT_ROUTES"/.test(source))
-console.log(source, 'routes', imports);
 	return transformSync(source, { presets: ['@babel/preset-env'] }).code;
 }
 
@@ -27,8 +25,13 @@ function mapDirToImports(dirs) {
 function mapDirToRoutes(dirs) {
 	return dirs.map(dir => {
 		const componentName = transformPathToName(dir);
-		return `React.createElement(Route, {path: '${path.dirname(dir).split('/').slice(2).join('/')}',
+		readRouterFromDir(dir)
+		return `React.createElement(Route, {path: '${path.dirname(dir).split('/').slice(2).join('/')}${readRouterFromDir(dir)}',
 			element: React.createElement(${transformPathToName(dir)}, {}, null)
 		}, null)`
 	})
+}
+
+function readRouterFromDir(dir) {
+	return require(`${cwd}/${dir}`).router
 }
